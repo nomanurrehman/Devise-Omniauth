@@ -13,4 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+
+//= require MDBootstrap/js/tether.min.js
+//= require MDBootstrap/js/bootstrap.min.js
+//= require MDBootstrap/js/mdb.min.js
+
 //= require_tree .
