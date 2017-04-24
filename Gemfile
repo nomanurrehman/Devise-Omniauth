@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby "2.4.0"
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -34,6 +36,15 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Use Devise for authentication
+gem 'devise', '~> 4.2'
+# Use Omniauth Facebook plugin
+gem 'omniauth-facebook', '~> 3.0'
+# Use Omniauth Github plugin
+gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
+# Use Omniauth Google+ plugin
+gem 'omniauth-gplus', '~> 2.0', '>= 2.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
