@@ -11,5 +11,11 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= require MDBootstrap/css/bootstrap.min.css
+ *= require MDBootstrap/css/mdb.min.css
  *= require_self
  */
+
+
+
+
