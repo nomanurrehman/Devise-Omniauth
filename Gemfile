@@ -47,6 +47,8 @@ gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
 gem 'omniauth-gplus', '~> 2.0', '>= 2.0.1'
 # Use Omniauth Twitter plugin
 gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
+# Use ActiveRecord Sessions
+gem 'activerecord-session_store', '~> 1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
