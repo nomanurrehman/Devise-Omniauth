@@ -40,7 +40,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Devise for authentication
 gem 'devise', '~> 4.2'
 # Use Omniauth Facebook plugin
-gem 'omniauth-facebook', '~> 3.0'
+gem 'omniauth-facebook', '~> 4.0'
 # Use Omniauth Github plugin
 gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
 # Use Omniauth Google plugin
