@@ -18,3 +18,6 @@
 
 # Ignore environment configuration
 .env
+
+# Ignore bower packages
+/vendor/assets/components
