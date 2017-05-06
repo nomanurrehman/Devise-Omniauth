@@ -4,8 +4,8 @@
   "authors": [
     "Noman ur Rehman"
   ],
-  "description": "A sample application to allow Facebook, Github, and Google+ login in a Rails application.",
+  "description": "A sample application to allow Facebook, Github, Google, and Twitter login in a Rails application.",
   "dependencies": {
-    "MDBootstrap": "4.3.1"
+    "admin-lte": "2.3.11"
   }
 }
