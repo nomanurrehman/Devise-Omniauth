@@ -27,7 +27,7 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
@@ -51,4 +51,33 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # Default url options when generating urls for action mailer
+  config.action_mailer.default_url_options = { host: 'localhost' }
+
+  # Email delivery method
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    address: ENV['SMTP_ENDPOINT'],
+    authentication: :login,
+    user_name: ENV['SMTP_USERNAME'],
+    password: ENV['SMTP_PASSWORD'],
+    tls: true,
+    enable_starttls_auto: true,
+    port: ENV['SMTP_PORT']
+  }
+
+  # SES Email configuration
+=begin  
+  config.action_mailer.smtp_settings = {
+    address: ENV['SMTP_ENDPOINT'],
+    authentication: :login,
+    user_name: ENV['SMTP_USERNAME'],
+    password: ENV['SMTP_PASSWORD'],
+    tls: true,
+    enable_starttls_auto: true,
+    port: ENV['SMTP_PORT']
+  }
+=end  
 end
