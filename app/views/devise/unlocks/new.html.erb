@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">Resend Unlock Instructions</h3>
+      </div>
+      <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do | f | %>
+        <div class="box-body">
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+          </div>
+        </div>
+        <div class="box-footer">
+          <%= f.submit 'Resend Unlock Instructions', class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

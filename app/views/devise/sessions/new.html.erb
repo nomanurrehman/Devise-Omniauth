@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">Sign In</h3>
+      </div>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="box-body">
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password %>
+            <%= f.password_field :password, autocomplete: 'off', class: 'form-control' %>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Remember Me
+            </label>
+          </div>
+        </div>
+        <div class="box-footer">
+          <%= f.submit 'Sign In', class: 'btn btn-primary' %>
+        </div>
+        <% if devise_mapping.omniauthable? %>
+          <div class="box-footer">
+            <% resource_class.omniauth_providers.each do | provider | %>
+              <%# required to convert google_oauth2 into google(for css class) %>
+              <% _provider = provider.to_s.split('_').first %>
+              <%= link_to(omniauth_authorize_path(resource_name, provider), class: 'btn btn-block btn-social btn-' + _provider) do %>
+                <i class="fa fa-<%= _provider %>"></i> Sign in with <%= OmniAuth::Utils.camelize(_provider) %>
+              <% end %>
+            <% end %>            
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>  

@@ -1,0 +1,24 @@
+<% content_for :alert do %>
+  <%= devise_error_messages! %>
+<% end %>  
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">Forgot your Password?</h3>
+      </div>
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do | f | %>
+        <div class="box-body">
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+          </div>
+        </div>
+        <div class="box-footer">
+          <%= f.submit 'Send Reset Password Instructions', class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

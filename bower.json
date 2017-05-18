@@ -1,0 +1,11 @@
+{
+  "name": "devise-omniauth",
+  "version": "0.0.1",
+  "authors": [
+    "Noman ur Rehman"
+  ],
+  "description": "A sample application to allow Facebook, Github, Google, and Twitter login in a Rails application.",
+  "dependencies": {
+    "admin-lte": "2.3.11"
+  }
+}

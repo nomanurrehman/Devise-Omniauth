@@ -10,6 +10,18 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *= require admin-lte/bootstrap/css/bootstrap.min.css
+ *= require admin-lte/dist/css/AdminLTE.css
+ *= require admin-lte/dist/css/skins/skin-blue.min.css
  *= require_self
+ *= require_tree .
  */
+
+ body{
+    background-color: #ecf0f5;
+    padding-top: 35px;
+ }
+
+
+
+
